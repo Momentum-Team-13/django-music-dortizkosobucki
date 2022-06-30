@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    <h1>{{ album.title }}</h1>
+
+    <div class="flex flex-wrap">
+
+        {% if album.artist %}
+        <div class="flex">
+            <div class="pr2"><i class="icofont-phone"></i></div>
+            <div>{{ album.artist }}</div>
+        </div>
+        {% endif %}
+
+        {% if album.image %}
+        <div class="flex">
+            <div class="pr2"><i class="icofont-ui-email"></i></div>
+            <div>{{ album.image }}</div>
+        </div>
+        {% endif %}
+
+    </div>
+    <p>
+
+    </p>
+</div>
+
+<a href="{% url 'list_albums' %}">Return to album list</a>
+
+{% endblock %}
