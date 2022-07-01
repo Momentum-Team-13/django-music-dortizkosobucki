@@ -18,6 +18,9 @@
             </div>
         </div>
         {% endif %}
+        {% if album.cover %}
+        <img src="{{ album.cover.url }}" alt="{{ album.cover }}">
+        {% endif %}
         <a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a><br>
         <a class="red" href="{% url 'delete_album' pk=album.pk %}">Delete Album</a>
     </div>

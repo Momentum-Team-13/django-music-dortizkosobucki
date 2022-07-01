@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Album
 from .forms import AlbumForm
+from webbrowser import get
 
 def list_albums(request):
     albums = Album.objects.all()

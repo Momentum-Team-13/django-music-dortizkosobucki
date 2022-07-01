@@ -1,0 +1,118 @@
+body {
+    background-image: linear-gradient(0deg, rgba(0, 52, 72, 0.38), rgba(255, 255, 255, 0.3)), url(ezgif.com-gif-maker.jpg);
+    background-size: 1600px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: rgb(136, 168, 195);
+    transition: .25s;
+}
+
+p {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+
+
+}
+
+.album-year {
+    background-color: white;
+    opacity: .8;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    color: rgb(109, 59, 59);
+    font-size: 55px;
+    padding: 10px;
+    background-attachment: fixed;
+
+}
+
+h2 {
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    color: rgb(75, 34, 116);
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h5 {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    color: rgb(96, 73, 73);
+}
+
+.record {
+    border: solid yellow 2px;
+    box-shadow: 10px 10px;
+    border-radius: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(203, 84, 84);
+
+    background-size: 1000px;
+    max-width: 500px;
+    margin: auto;
+
+}
+
+.flex-container {
+    padding: 20px;
+}
+
+.artist {
+    background-image: linear-gradient(to bottom right, white, gold);
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+
+
+}
+
+img {
+    border: 5px solid black;
+    max-width: 300px;
+    margin: 10px;
+
+}
+
+.note {
+    background-color: rgb(203, 84, 84);
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    color: rgb(203, 230, 252)
+}
+
+.options {
+    background-color: rgb(225, 239, 251);
+    padding: 10px;
+    border-radius: 10px;
+}

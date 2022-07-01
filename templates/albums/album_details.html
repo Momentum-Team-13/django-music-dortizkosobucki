@@ -1,31 +1,31 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div>
-    <h1>{{ album.title }}</h1>
 
-    <div class="flex flex-wrap">
+<h1>{{ album.title }}</h1>
 
-        {% if album.artist %}
-        <div class="flex">
-            <div class="pr2"><i class="icofont-phone"></i></div>
-            <div>{{ album.artist }}</div>
-        </div>
-        {% endif %}
+{% for artist in album.artist.all %}
 
-        {% if album.image %}
-        <div class="flex">
-            <div class="pr2"><i class="icofont-ui-email"></i></div>
-            <div>{{ album.image }}</div>
-        </div>
-        {% endif %}
+<a>Artist: {{ artist.name }}</a>
 
-    </div>
-    <p>
-        <a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a><br>
-        <a class="red" href="{% url 'delete_album' pk=album.pk %}">Delete Album</a>
-    </p>
+{% endfor %}
+
+{% if album.artist %}
+<div class="flex">
+    <div>{{ album.artist }}</div>
 </div>
+{% endif %}
+
+{% if album.cover %}
+<img src="{{ album.cover.url }}" alt="{{ album.cover }}">
+{% endif %}
+
+
+<p>
+    <a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a><br>
+    <a class="red" href="{% url 'delete_album' pk=album.pk %}">Delete Album</a>
+</p>
+
 
 <a href="{% url 'list_albums' %}">Return to album list</a>
 
