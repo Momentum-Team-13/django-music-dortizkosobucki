@@ -10,11 +10,3 @@ class Album(models.Model):
 
     def __str__(self):
         return f'{self.title}'
-
-
-
-# class Cover(models.Model):
-#     picture = models.ImageField(upload_to='images/')
-
-#     def __str__(self):
-#         return self.image
