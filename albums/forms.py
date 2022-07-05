@@ -1,5 +1,5 @@
 from django import forms
-from .models import Album
+from .models import Album, Favorite
 
 class AlbumForm(forms.ModelForm):
     class Meta: 
@@ -11,3 +11,11 @@ class AlbumForm(forms.ModelForm):
             'cover',
         ]
 
+
+class FavoriteForm(forms.ModelForm):
+    class Meta:
+        model = Favorite
+        fields = [
+            'user',
+            'album',
+        ]

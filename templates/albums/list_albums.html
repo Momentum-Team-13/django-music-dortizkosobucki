@@ -18,6 +18,10 @@
     <img src="{{ album.cover.url }}" alt="{{ album.cover }}">
     {% endif %}
 
+    {% if album in favorite_albums %}
+    <h1>FAVORITE</h1>
+    {% endif %}
+
     <a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a><br>
     <a class="red" href="{% url 'delete_album' pk=album.pk %}">Delete Album</a>
 
