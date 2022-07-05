@@ -3,7 +3,7 @@
 {% block content %}
 <h1>Delete Album</h1>
 
-<div>
+<div class="container">
     <form action="{% url 'delete_album' pk=album.pk %}" method="POST">
         {% csrf_token %}
         <p>Are you sure you want to delete {{ album.name }}?</p>

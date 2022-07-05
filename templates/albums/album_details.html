@@ -11,16 +11,16 @@
 {% endfor %}
 
 {% if album.artist %}
-<div class="flex">
+<div class="container">
     <div>{{ album.artist }}</div>
+
+    {% endif %}
+
+    {% if album.cover %}
+    <img src="{{ album.cover.url }}" alt="{{ album.cover }}">
+    {% endif %}
+
 </div>
-{% endif %}
-
-{% if album.cover %}
-<img src="{{ album.cover.url }}" alt="{{ album.cover }}">
-{% endif %}
-
-
 <p>
     <a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a><br>
     <a class="red" href="{% url 'delete_album' pk=album.pk %}">Delete Album</a>

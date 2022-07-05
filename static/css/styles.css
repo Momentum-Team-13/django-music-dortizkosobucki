@@ -1,5 +1,4 @@
 body {
-    background-image: linear-gradient(0deg, rgba(0, 52, 72, 0.38), rgba(255, 255, 255, 0.3)), url(ezgif.com-gif-maker.jpg);
     background-size: 1600px;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -26,19 +25,11 @@ p {
 
 }
 
-.album-year {
-    background-color: white;
-    opacity: .8;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 10px;
-}
-
 h1 {
     text-align: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
-    color: rgb(109, 59, 59);
+    color: rgb(0, 128, 255);
     font-size: 55px;
     padding: 10px;
     background-attachment: fixed;
@@ -49,7 +40,7 @@ h2 {
     text-align: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
-    color: rgb(75, 34, 116);
+    color: rgb(21, 155, 167);
     font-size: 30px;
 }
 
@@ -61,11 +52,11 @@ h5 {
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
-    color: rgb(96, 73, 73);
+    color: rgb(165, 186, 180);
 }
 
 .record {
-    border: solid yellow 2px;
+    border: solid rgb(111, 255, 0) 2px;
     box-shadow: 10px 10px;
     border-radius: 20px;
     align-items: center;
@@ -87,13 +78,10 @@ h5 {
 }
 
 .artist {
-    background-image: linear-gradient(to bottom right, white, gold);
     border-radius: 20px;
     text-align: center;
     padding: 10px;
     margin: 10px;
-
-
 }
 
 img {
@@ -101,18 +89,4 @@ img {
     max-width: 300px;
     margin: 10px;
 
-}
-
-.note {
-    background-color: rgb(203, 84, 84);
-    padding: 5px;
-    margin: 5px;
-    border-radius: 10px;
-    color: rgb(203, 230, 252)
-}
-
-.options {
-    background-color: rgb(225, 239, 251);
-    padding: 10px;
-    border-radius: 10px;
 }
