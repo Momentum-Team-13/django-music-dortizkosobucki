@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="record">Delete Favorite</h1>
+
+<form action="{% url 'delete_favorite' pk=album.pk %}" method="POST">
+    {% csrf_token %}
+    <p>Are you sure you want to remove "{{ album }}" from favorites?</p>
+    <div class="card-content">
+        <button type="submit">Yes, delete favorite</button><br />
+        <a href="{% url 'album_detail' pk=album.pk %}">Cancel</a>
+    </div>
+</form>
+
+{% endblock %}
