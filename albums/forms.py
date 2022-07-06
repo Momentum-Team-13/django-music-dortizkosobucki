@@ -19,3 +19,4 @@ class FavoriteForm(forms.ModelForm):
             'user',
             'album',
         ]
+

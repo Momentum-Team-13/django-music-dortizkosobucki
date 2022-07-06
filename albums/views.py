@@ -1,6 +1,7 @@
+import re
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Album
-from .forms import AlbumForm
+from .forms import AlbumForm 
 from webbrowser import get
 
 def list_albums(request):
@@ -28,7 +29,7 @@ def edit_album(request, pk):
     if request.method == 'GET':
         form = AlbumForm(instance=album)
     else:
-        form = AlbumForm(request.POST, request.FILES)
+        form = AlbumForm(request.POST, request.FILES, instance=album)
         if form.is_valid():
             form.save()
             return redirect(to='list_albums')
@@ -41,4 +42,17 @@ def delete_album(request, pk):
         return redirect(to='list_albums')
     return render(request, "albums/delete_album.html", {"album": album})
 
-# Create your views here.
+# def list_by_artist(request, pk):
+#     artist = get_object_or_404(Artist, pk=pk)
+#     return render(request, 'albums/list_by_albums.html', {"artist":artist})
+
+# def favorite(request, pk):
+#     album = get_object_or_404(Album, pk=pk)
+#     if request.method == "GET":
+#         form = FavoriteForm
+#     else:
+#         form = FavoriteForm(data=request.POST)
+#         if form.is_valid():
+#             form.save()
+#             return redirect(to='list_albums')
+#     return render(request, "albums/favorite.html", {"form":form, "album":album})

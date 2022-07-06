@@ -5,25 +5,31 @@
 
 <p><a href="{% url 'add_album' %}">Add New Album</a></p>
 
-<div class="container">
+<div class="flex-container">
     {% for album in albums %}
+    <div class="record"><a href="{% url 'album_details' pk=album.pk %}">{{ album.title }}</a></div>
 
-    <a href="{% url 'album_details' pk=album.pk %}">View {{ album.title }}</a>
+    <div class="artist">
+        {% if album.artist %}
+        {{ album.artist }}
+        {% endif %}
+    </div>
 
-    {% if album.artist %}
-    {{ album.artist }}
-    {% endif %}
+    <div class="cover">
+        {% if album.cover %}
+        <img src="{{ album.cover.url }}" alt="{{ album.cover }}">
+        {% endif %}
+    </div>
 
-    {% if album.cover %}
-    <img src="{{ album.cover.url }}" alt="{{ album.cover }}">
-    {% endif %}
-
-    {% if album in favorite_albums %}
-    <h1>FAVORITE</h1>
-    {% endif %}
-
-    <a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a><br>
-    <a class="red" href="{% url 'delete_album' pk=album.pk %}">Delete Album</a>
+    <div class="favorite">
+        {% if album in favorite_albums %}
+        <h2>FAVORITE</h2>
+        {% endif %}
+    </div>
+    <div class="functions">
+        <a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a><br>
+        <a class="red" href="{% url 'delete_album' pk=album.pk %}">Delete Album</a>
+    </div>
 
     {% endfor %}
 </div>
