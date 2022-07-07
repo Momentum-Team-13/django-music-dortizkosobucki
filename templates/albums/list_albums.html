@@ -22,9 +22,9 @@
         <div class="favorite">
             {% if album in favorite_albums %}
             <h2>*</h2>
-            <a href="{% url 'delete_favorite' pk=album.pk %}">Delete Favorite?</a>
+            <a href="{% url 'delete_favorite' pk=album.pk %}">Delete from Favorites</a>
             {% else %}
-            <a href="{% url 'add_favorite' pk=album.pk %}">Add Favorite?</a>
+            <a href="{% url 'add_favorite' pk=album.pk %}">Add to Favorites</a>
             {% endif %}
         </div>
         <div class="functions">
