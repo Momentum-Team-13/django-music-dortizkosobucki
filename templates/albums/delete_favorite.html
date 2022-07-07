@@ -8,7 +8,7 @@
     <p>Are you sure you want to remove "{{ album }}" from favorites?</p>
     <div class="card-content">
         <button type="submit">Yes, delete favorite</button><br />
-        <a href="{% url 'album_detail' pk=album.pk %}">Cancel</a>
+        <a href="{% url 'album_details' pk=album.pk %}">Cancel</a>
     </div>
 </form>
 
