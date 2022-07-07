@@ -74,6 +74,10 @@ h5 {
     text-align: center;
 }
 
+h2 {
+    color: azure;
+}
+
 img {
     border: 5px solid black;
     max-width: 300px;

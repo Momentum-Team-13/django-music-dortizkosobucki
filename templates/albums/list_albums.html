@@ -21,7 +21,7 @@
         </div>
         <div class="favorite">
             {% if album in favorite_albums %}
-            <h2>*</h2>
+            <h2><span class='favorite-icon'><i class="fa-solid fa-ranking-star"></i></span></h2>
             <a href="{% url 'delete_favorite' pk=album.pk %}">Delete from Favorites</a>
             {% else %}
             <a href="{% url 'add_favorite' pk=album.pk %}">Add to Favorites</a>
