@@ -2,8 +2,7 @@
 
 {% block content %}
 <h1>All Albums</h1>
-
-<p><a href="{% url 'add_album' %}">Add New Album</a></p>
+<p id="add-album"><a href="{% url 'add_album' %}">Add New Album</a></p>
 
 <div class="flex-container">
     {% for album in albums %}
